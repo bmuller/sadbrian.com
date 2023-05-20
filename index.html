@@ -9,15 +9,13 @@
     <meta property="og:description" content="Brian will never give you up, but you have let him down." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <script defer data-domain="sadbrian.com" src="https://plausible.io/js/script.js"></script>
     <script>
-      window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
-      (function () {
-        const url = new URL(location.href)
-        const queryParams = new URLSearchParams(location.search)
-        if (queryParams.has('email')) plausible('spear-phishing', { props: { email: queryParams.get('email') } })
-      })()
+      window.plausible = function() { (window.plausible.q = []).push(arguments) }
+      const url = new URL(location.href)
+      const queryParams = new URLSearchParams(location.search)
+      if (queryParams.has('email')) plausible('spear-phishing', { props: { email: queryParams.get('email') } })
     </script>
+    <script defer data-domain="sadbrian.com" src="https://plausible.io/js/script.js"></script>
   </head>
   <body>
     <div class="container">
